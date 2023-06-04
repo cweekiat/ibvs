@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node with SITL and Gazebo -->
+	<include file="$(find px4)/launch/mavros_posix_sitl.launch">
+	</include>
+
+	<!-- Our node to control the drone -->
+	<node pkg="catchit3d" type="offb_node.cpp" name="offb_node_cpp" required="true" output="screen" />
+</launch>
+

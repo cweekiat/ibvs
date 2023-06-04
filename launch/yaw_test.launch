@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node-->
+	<include file="$(find mavros)/launch/px4.launch">
+	</include>
+
+	<!-- Our node to control the drone -->
+	<node pkg="catchit3d" type="yaw_test.py" name="main" required="true" output="screen" />
+    <!-- <node pkg="catchit3d" type="detector.py" name="detector" required="true" output="screen" /> -->
+    
+</launch>
+

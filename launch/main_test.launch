@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+	<!-- Include the MAVROS node-->
+	<include file="$(find mavros)/launch/px4.launch">
+	</include>
+
+	<!-- Our node to control the drone -->
+	<node pkg="catchit3d" type="main.py" name="main" required="true" output="screen" />
+    <node pkg="catchit3d" type="detector.py" name="detector" required="true" output="screen" launch-prefix="gnome-terminal--command"/>
+    <node pkg="catchit3d" type="visual_servo.py" name="visual_servo" required="true" output="screen" launch-prefix="gnome-terminal--command"/>
+    
+</launch>
+
